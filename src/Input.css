@@ -1,0 +1,38 @@
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  display: flex;
+}
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+input {
+  height: 4rem;
+  outline: none;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+.canvas {
+  box-shadow: 0 6px 30px rgba(34, 34, 34, 0.699);
+}
