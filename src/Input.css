@@ -36,3 +36,13 @@ input {
 .canvas {
   box-shadow: 0 6px 30px rgba(34, 34, 34, 0.699);
 }
+@media (max-width: 600px) {
+  form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  label {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
