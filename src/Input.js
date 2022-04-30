@@ -7,25 +7,25 @@ const Input = () => {
     draw(input);
   };
 
-  const refContainer = useRef(null);
+  const refContainer = useRef();
 
   function draw(val) {
-    const refElement = refContainer.current;
-    const canvas = refElement.getContext("2d");
-    canvas.font = "38px serif";
+    const canvas = refContainer.current;
+    const ctx = canvas.getContext("2d");
 
-    let dimension = refElement.getBoundingClientRect();
+    let dimension = canvas.getBoundingClientRect();
     console.log(dimension);
 
     canvas.width = dimension.width * devicePixelRatio;
     canvas.height = dimension.height * devicePixelRatio;
 
-    canvas.scale(devicePixelRatio, devicePixelRatio);
+    ctx.scale(devicePixelRatio, devicePixelRatio);
 
-    refElement.style.width = dimension.width + "px";
-    refElement.style.height = dimension.height + "px";
+    canvas.style.width = dimension.width + "px";
+    canvas.style.height = dimension.height + "px";
 
-    canvas.fillText(val, 10, 50);
+    ctx.font = "3.8rem serif";
+    ctx.fillText(val, 10, 50);
   }
 
   return (
