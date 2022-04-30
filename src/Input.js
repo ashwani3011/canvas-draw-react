@@ -14,16 +14,16 @@ const Input = () => {
     const canvas = refElement.getContext("2d");
     canvas.font = "38px serif";
 
-    // let dimension = refElement.getBoundingClientRect();
-    // console.log(dimension);
+    let dimension = refElement.getBoundingClientRect();
+    console.log(dimension);
 
-    // canvas.width = dimension.width * devicePixelRatio;
-    // canvas.height = dimension.height * devicePixelRatio;
+    canvas.width = dimension.width * devicePixelRatio;
+    canvas.height = dimension.height * devicePixelRatio;
 
-    // canvas.scale(devicePixelRatio, devicePixelRatio);
+    canvas.scale(devicePixelRatio, devicePixelRatio);
 
-    // refElement.style.width = dimension.width + "px";
-    // refElement.style.height = dimension.height + "px";
+    refElement.style.width = dimension.width + "px";
+    refElement.style.height = dimension.height + "px";
 
     canvas.fillText(val, 10, 50);
   }
